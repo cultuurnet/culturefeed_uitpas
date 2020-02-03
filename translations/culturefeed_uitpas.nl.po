@@ -159,6 +159,10 @@ msgstr "Andere regio's"
 msgid "An overview of all your UiTPAS actions."
 msgstr "Jouw UiTPAS acties."
 
+#: culturefeed_uitpas.profile.inc:123
+msgid "Administer your UiTPAS on "
+msgstr "Beheer je UiTPAS op "
+
 #: culturefeed_uitpas.menu.inc:60;68
 msgid "Discover which promotions and advantages you are entitled to."
 msgstr "Ontdek jouw UiTPAS voordelen."
