@@ -17,48 +17,12 @@ function culturefeed_uitpas_culturefeed_ui_profile_sections() {
     /* @var CultureFeed_Uitpas_Passholder $passholder */
     $passholder = $user_info->passholder;
 
-    $links = array(
-      array(
-        'title' => t('My UiTPAS'),
-        'href' => 'culturefeed/profile/uitpas',
-        'attributes' => array(
-          'title' => t('Check your personal UiTPAS data and cardnumber.'),
-        ),
-      ),
-      array(
-        'title' => t('My promotions'),
-        'href' => 'culturefeed/profile/uitpas/promotions',
-        'attributes' => array(
-          'title' => t('Find out which promotions and advantages you are entitled to.'),
-        ),
-      ),
-      array(
-        'title' => t('My coupons'),
-        'href' => 'culturefeed/profile/uitpas/coupons',
-        'attributes' => array(
-          'title' => t('An overview of all your UiTPAS coupons.'),
-        )
-      ),
-      array(
-        'title' => t('My memberships'),
-        'href' => 'culturefeed/profile/uitpas/memberships',
-        'attributes' => array(
-          'title' => t('An overview of all your UiTPAS memberships.'),
-        )
-      ),
-      array(
-        'title' => t('Points history'),
-        'href' => 'culturefeed/profile/uitpas/actions',
-        'attributes' => array(
-          'title' => t('An overview of all your UiTPAS actions.'),
-        ),
-      ),
-    );
+    $vars['intro_text'] = 'blablabla';
 
     return array(
       'classes' => array('uitpas'),
       'content' => theme('culturefeed_uitpas_profile_section', array(
-        'links' => theme('links', array('links' => $links)),
+        'links' => 'Beheer je UiTPAS op <a href="https://beta.uitpas.be/">UiTPAS.be</a>',
         'points_label' => t('Points balance'),
         'points_value' => $passholder->points,
       )),
@@ -66,13 +30,4 @@ function culturefeed_uitpas_culturefeed_ui_profile_sections() {
     );
 
   }
-
-  else {
-    return array(
-      'classes' => array('uitpas'),
-      'content' => theme('culturefeed_uitpas_profile_section_register'),
-      'title' => variable_get('culturefeed_uitpas_card_name', 'UiTPAS'),
-    );
-  }
-
 }
