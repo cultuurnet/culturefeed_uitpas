@@ -22,7 +22,7 @@ function culturefeed_uitpas_culturefeed_ui_profile_sections() {
     return array(
       'classes' => array('uitpas'),
       'content' => theme('culturefeed_uitpas_profile_section', array(
-        'links' => 'Beheer je UiTPAS op <a href="https://beta.uitpas.be/">UiTPAS.be</a>',
+        'links' => 'Beheer je UiTPAS op <a href="https://www.uitpas.be/?utm_source=uitinvlaanderen&utm_medium=website&utm_campaign=profielpagina&utm_content=ga-naar-uitpas">UiTPAS.be</a>',
         'points_label' => t('Points balance'),
         'points_value' => $passholder->points,
       )),
