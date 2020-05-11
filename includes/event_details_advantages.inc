@@ -70,7 +70,7 @@ function culturefeed_uitpas_event_details_advantages_get(&$balie_id = NULL, &$ba
 
       $title = t('Promotions at @organisation', array('@organisation' => ($balie_name) ? $balie_name : t('this organizer')));
       $show_all_link_title = t('All promotions');
-      $show_all_link_path = 'promotions';
+      $show_all_link_path = 'https://www.uitpas.be/voordelen-zoeken?utm_source=uitinvlaanderen&utm_medium=website&utm_campaign=detailpagina&utm_content=alle-voordelen#/voordelen';
 
       $table = array(
         'rows' => array(),
@@ -84,7 +84,7 @@ function culturefeed_uitpas_event_details_advantages_get(&$balie_id = NULL, &$ba
       foreach ($promotions as $promotion) {
 
         /* @var \CultureFeed_Uitpas_Passholder_PointsPromotion $promotion */
-        $promotion_path = 'promotion/' . culturefeed_search_slug($promotion->title) . '/' . $promotion->id;
+        $promotion_path = 'https://www.uitpas.be/voordelen-zoeken?utm_source=uitinvlaanderen&utm_medium=website&utm_campaign=detailpagina&utm_content=alle-voordelen#/voordelen/' . $promotion->id;
         $promotion_title = l($promotion->title, $promotion_path);
         $promotion_points = $promotion->points;
         $points_remark = '';
