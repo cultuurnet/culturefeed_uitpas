@@ -17,7 +17,7 @@ function culturefeed_uitpas_culturefeed_ui_profile_sections() {
     /* @var CultureFeed_Uitpas_Passholder $passholder */
     $passholder = $user_info->passholder;
 
-    $vars['intro_text'] = 'blablabla';
+    $vars['intro_text'] = '';
 
     return array(
       'classes' => array('uitpas'),
